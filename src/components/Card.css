@@ -1,0 +1,31 @@
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: 16px;
+}
+
+.card__title{
+    font-family: var(--text-heading);
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card__body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin: 0;
+}

@@ -1,0 +1,17 @@
+.work{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.work__title{
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.work__cards{
+    display: flex;
+    gap: 24px;
+}

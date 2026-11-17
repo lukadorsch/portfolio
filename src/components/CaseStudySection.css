@@ -1,0 +1,32 @@
+.css{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.css__overline{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--accent);
+    margin: 0;
+}
+
+.css__title{
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 500;
+    max-width: 640px;
+    margin: 0;
+}
+
+.css__intro{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 640px;
+    margin: 0;
+}

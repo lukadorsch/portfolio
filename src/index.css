@@ -1,0 +1,49 @@
+:root {
+    --bg-page: #F6F1E9;
+    --bg-card: #FFFCF7;
+    --bg-placeholder: #EDE5DA;
+    --border-default: #E7DED2;
+    --text-primary: #2A211C;
+    --text-secondary: #6B5D53;
+    --text-on-accent: #FFFFFF;
+    --accent: #C2410C;
+    --accent-hover: #9A3412;
+    --accent-pressed: #7C2D12;
+    --accent-light: #FBE6D8;
+    --accent-light-pressed: #F6D3BC;
+    --status-available: #4E9A5E;
+    --font-heading: 'Space Grotesk Variable', sans-serif;
+    --font-body: 'Inter Variable', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+}  
+
+html {
+    scroll-behavior: smooth;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.home__content{
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    padding-bottom: 96px;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid var(--border-default);
+    margin: 24px 0;
+}
