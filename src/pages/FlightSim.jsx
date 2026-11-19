@@ -6,7 +6,7 @@ import CaseStudySection from '../components/CaseStudySection';
 import Tag from '../components/Tag';
 import Card from '../components/Card';
 
-import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag } from 'lucide-react';
+import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag, ArrowRight } from 'lucide-react';
 
 function FlightSim() {
     const flightSimMetaItems=[
@@ -97,7 +97,63 @@ function FlightSim() {
                     </div>
                 </CaseStudySection>
                 <hr />
-                
+                <CaseStudySection
+                    overline="03 — Study Design"
+                    title="Same task, two devices, every run measured"
+                    intro="Every participant flew the same course with both devices: 
+                    through three rings in a fixed order, followed by a landing in a 
+                    marked zone. The only thing that changed between runs was the input device."
+                >
+                    <hr />
+                    <div className="card-grid">
+                        <div className="css__number-card">
+                            <h4 className="css__number-title">7</h4>
+                            <p className="css__number-body">participants (5 students, 1 professor, 1 research associate)</p>
+                        </div>
+                        <div className="css__number-card">
+                            <h4 className="css__number-title">2</h4>
+                            <p className="css__number-body">input devices</p>
+                        </div>
+                        <div className="css__number-card">
+                            <h4 className="css__number-title">3 rings</h4>
+                            <p className="css__number-body">+ landing per run</p>
+                        </div>
+                        <div className="css__number-card">
+                            <h4 className="css__number-title">Within-subjects</h4>
+                            <p className="css__number-body">everyone used both devices</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <h3 className="css__subHeader">Procedure</h3>
+                    <div className="css__steps">
+                        <Card badge={<Tag>1</Tag>} title="Choose device">
+                            participants picked which device to start with
+                        </Card>
+                        <ArrowRight className="css__stepArrow" size={18} />
+                        <Card badge={<Tag>2</Tag>} title="Practice run">
+                            get familiar with the controls
+                        </Card>
+                        <ArrowRight className="css__stepArrow" size={18} />
+                        <Card badge={<Tag>3</Tag>} title="Measured run">
+                            performance data logged automatically
+                        </Card>
+                        <ArrowRight className="css__stepArrow" size={18} />
+                        <Card badge={<Tag>4</Tag>} title="Questionnaire">
+                            rate the device on a 7-point scale
+                        </Card>
+                    </div>
+                    <p className="css__note">Then the same sequence with the second device.</p>
+                    <h3 className="css__subHeader">What I measured</h3>
+                    <div className="card-grid">
+                        <Card title="Objective · logged automatically">
+                            Succesful landing · Rings reached · Flight time (successful runs 
+                            only) · Number of crashes
+                        </Card>
+                        <Card title="Subjective · 7-point Likert Scale">
+                            Intuitiveness · Precision · Fun · Required concentration · Overall rating
+                        </Card>
+                    </div>
+                </CaseStudySection>
             </main>
             <hr />
             <Footer />
