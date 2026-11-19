@@ -6,6 +6,8 @@ import CaseStudySection from '../components/CaseStudySection';
 import Tag from '../components/Tag';
 import Card from '../components/Card';
 
+import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag } from 'lucide-react';
+
 function FlightSim() {
     const flightSimMetaItems=[
         { header: 'Context', body: 'Coburg University · HCI2'},
@@ -50,6 +52,52 @@ function FlightSim() {
                         </Card>
                     </div>
                 </CaseStudySection>
+                <hr />
+                <CaseStudySection 
+                    overline="02 — What I built"
+                    title="From a given flight sim to a testable study setup"
+                    intro="The course provided a basic Unity flight simulation. My job was
+                    to turn it into something I could actually run a study with: two complete
+                    control schemes, a clear trask for participants and automatic data collection,
+                    so every run was measured the same way."
+                >
+                    <div className="card-grid">
+                        <Card badge={<Tag><Gamepad2 size={18} /></Tag>} title="Two control schemes">
+                            Nintendo Switch Pro Controller and KORG nanoKONTROL2 MIDI controller
+                        </Card>
+                        <Card badge={<Tag><List size={18} /></Tag>} title="Start menu">
+                            Participants pick their input device before each run
+                        </Card>
+                        <Card badge={<Tag><Navigation size={18} /></Tag>} title="Direction indicator">
+                            An arrow pointing to the next ring, so nobody gets lost
+                        </Card>
+                    </div>
+                    <div className="card-grid">
+                        <Card badge={<Tag><RotateCcw size={18} /></Tag>} title="Crash detection & respawn">
+                            Crashes are counted and the run continues
+                        </Card>
+                        <Card badge={<Tag><FileSpreadsheet size={18} /></Tag>} title="Automatic CSV logging">
+                            Success, rings, flight time and crashes saved per run
+                        </Card>
+                        <Card badge={<Tag><Flag size={18} /></Tag>} title="Results screen">
+                            Shown after a successful landing
+                        </Card>
+                    </div>
+                    <h3 className="css__subHeader">Control Mapping</h3>
+                    <p className="css__intro">Both devices controlled the same four actions: 
+                        pitch, yaw roll and turbo
+                    </p>
+                    <div className="css__mappingGrid">
+                        <Card title="Nintendo Switch Pro Controller">
+                            <img className="css__mapping" src="/mapping-gamepad.svg" alt="" />
+                        </Card>
+                        <Card title="KORG nanoKONTROL2 MIDI controller">
+                            <img className="css__mapping" src="/mapping-midi.svg" alt="" />
+                        </Card>
+                    </div>
+                </CaseStudySection>
+                <hr />
+                
             </main>
             <hr />
             <Footer />

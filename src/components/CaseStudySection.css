@@ -30,3 +30,22 @@
     max-width: 640px;
     margin: 0;
 }
+
+.css__subHeader{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.css__mappingGrid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+}
+
+.css__mapping{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

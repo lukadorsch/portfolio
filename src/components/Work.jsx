@@ -7,7 +7,7 @@ function Work() {
             <h2 className="work__title">Selected Work</h2>
             <div className="work__cards">
                 <ProjectCard
-                image="/flightsim.png"
+                image="/placeholder.png"
                 title="AI Product Data Checker"
                 description="An AI-assisted tool that helps shop teams keep product data consistent."
                 tags={['UX for AI', 'React', 'Python', 'User Research']}
