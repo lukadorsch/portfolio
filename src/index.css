@@ -1,17 +1,19 @@
 :root {
-    --bg-page: #F6F1E9;
-    --bg-card: #FFFCF7;
-    --bg-placeholder: #EDE5DA;
-    --border-default: #E7DED2;
-    --text-primary: #2A211C;
-    --text-secondary: #6B5D53;
+    --bg-page: #FAF8F5;
+    --bg-card: #FFFEFC;
+    --bg-placeholder: #EFECE7;
+    --border-default: #E7E3DD;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
     --text-on-accent: #FFFFFF;
-    --accent: #C2410C;
-    --accent-hover: #9A3412;
-    --accent-pressed: #7C2D12;
-    --accent-light: #FBE6D8;
-    --accent-light-pressed: #F6D3BC;
-    --status-available: #4E9A5E;
+    --accent: #2563EB;
+    --accent-hover: #1D4ED8;
+    --accent-pressed: #1E40AF;
+    --accent-light: #EFF4FE;
+    --accent-light-pressed: #DBE6FD;
+    --status-available: #16A34A;
+    --chart-1: #2563EB;
+    --chart-2: #A8A29E;
     --font-heading: 'Space Grotesk Variable', sans-serif;
     --font-body: 'Inter Variable', sans-serif;
 }
