@@ -15,7 +15,7 @@
 }
 
 .card__title{
-    font-family: var(--text-heading);
+    font-family: var(--font-heading);
     font-size: 22px;
     line-height: 1.2;
     font-weight: 600;
