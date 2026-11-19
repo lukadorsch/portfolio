@@ -1,0 +1,20 @@
+.legend{
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text-secondary)
+}
+
+.legend__item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend__swatch{
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}

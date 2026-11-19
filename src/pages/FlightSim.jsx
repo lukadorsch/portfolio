@@ -5,8 +5,12 @@ import '../components/FlightSim.css';
 import CaseStudySection from '../components/CaseStudySection';
 import Tag from '../components/Tag';
 import Card from '../components/Card';
+import Legend from '../components/Legend';
+import ResultCard from '../components/ResultCard';
+import RatingChart from '../components/RatingChart';
+import { objectiveResults, subjectiveResults } from '../data/flightsim';
 
-import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag, ArrowRight } from 'lucide-react';
+import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag, ArrowRight, Check } from 'lucide-react';
 
 function FlightSim() {
     const flightSimMetaItems=[
@@ -151,6 +155,86 @@ function FlightSim() {
                         </Card>
                         <Card title="Subjective · 7-point Likert Scale">
                             Intuitiveness · Precision · Fun · Required concentration · Overall rating
+                        </Card>
+                    </div>
+                </CaseStudySection>
+                <hr />
+                <CaseStudySection
+                    overline="04 — Results"
+                    title="The gamepad won on performace — but not on fun"
+                    intro="The difference in performance was bigger than expected: every gamepad run was successful, 
+                    while only one MIDI run made it to the landing. Subjectively, the picture was similar, 
+                    with one clear exception: fun."
+                >
+                    <h3 className="css__subHeader">Objective results</h3>
+                    <Legend />
+                    <div className="card-grid">
+                        {objectiveResults.map((r) => <ResultCard key={r.label} {...r} />)}
+                    </div>
+                    <p className="css__note">Flight time is left out: only one MIDI run was successful (145 s vs. 45 s average with the gamepad)</p>
+                    <h3 className="css__subHeader">Subjective results</h3>
+                    <RatingChart data={subjectiveResults} />
+                    <div className="card-grid">
+                        <Card badge={<Tag>H1</Tag>} status={<span className="card__status"><Check size={16} />Confirmed</span>} title="Performance">
+                            The gamepad leads to better performance:
+                            more successful runs, fewer crashes, faster flights.
+                        </Card>
+                        <Card badge={<Tag>H2</Tag>} status={<span className="card__status"><Check size={16} />Confirmed</span>} title="Control">
+                            The gamepad feels more intuitive and precise.
+                        </Card>
+                        <Card badge={<Tag>H3</Tag>} status={<span className="card__status"><Check size={16} />Confirmed</span>} title="Fun">
+                            The MIDI controller is just as fun,
+                            because of its unusual way of interacting.
+                        </Card>
+                    </div>
+                </CaseStudySection>
+                <hr />
+                <CaseStudySection 
+                    overline="05 — Key Insight"
+                >
+                    <Card
+                        style={{ border: '1px solid var(--accent)', padding: 48 }}
+                        titleStyle={{ maxWidth: 800, fontSize: '28px' }}
+                        title="
+                    Performance and enjoyment don’t always go together. An unfamiliar input can 
+                    be fun even while people keep failing, but for tasks that need precision, 
+                    the mapping has to match what users expect."
+                    />
+                    <h3 className="css__subHeader">Two lessons I'm taking into future projects:</h3>
+                    <div className="card-grid">
+                        <Card title="Novely creates engagement, not usability.">
+                            The MIDI controller was rated just as fun, but needed twice the concentration 
+                            and led to five times more crashes. Fun alone doesn't make an interface work.
+                        </Card>
+                        <Card title="Mapping beats hardware.">
+                            The biggest problem wasn't the device itself but one mapping decision: the pitch fader. 
+                            Matching users' mental models matter more than the physical controls.
+                        </Card>
+                    </div>
+                </CaseStudySection>
+                <hr />
+                <CaseStudySection
+                    overline="06 — Reflection"
+                    title="What I'd do differently next time"
+                    intro="The study gave clear tendencies, but it also had limits I'd fix in a follow-up. 
+                    Looking back critically is part of the process, and these lessons directly shaped how I plan studies now."
+                >
+                    <div className="card-grid">
+                        <Card title="Limitations">
+                            <ul>
+                                <li><strong>Small sample:</strong> 7 participants show tendencies, not proof.</li>
+                                <li><strong>Descriptive statistics only:</strong> no significant tests.</li>
+                                <li><strong>Order not counterbalanced:</strong> participants chose which device to start with, so learning effects are possible</li>
+                                <li><strong>Flight time for MIDI is based on a single successful run,</strong> so it isn't meaningful.</li>
+                            </ul>
+                        </Card>
+                        <Card title="Next time I would">
+                            <ul>
+                                <li><strong>Counterbalance the device order</strong> so half the participants start with each device.</li>
+                                <li><strong>Run a pilot test first,</strong> which would have caught the pitch-mapping problem before the actual study.</li>
+                                <li><strong>Iterate on the MIDI mapping</strong> based on observed errors and test again.</li>
+                                <li><strong>Add a significance test</strong> suited to small samples, such as the Wilcoxon signed-rank test.</li>
+                            </ul>
                         </Card>
                     </div>
                 </CaseStudySection>

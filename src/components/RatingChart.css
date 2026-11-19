@@ -1,0 +1,63 @@
+.rating-chart__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rating-chart{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.rating-chart__group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 8px;
+    border-radius: 12px;
+}
+
+.rating-chart__group.is-highlight {
+    background: var(--accent-light);
+}
+
+.rating-chart__bars{
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 240px;
+}
+
+.rating-chart__bar-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    gap: 4px;
+}
+
+.rating-chart__bar{
+    width: 20px;
+    border-radius: 4px 4px 0 0;
+}
+
+.rating-chart__value{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.rating-chart__label{
+    font-size: 14px;
+    text-align: center;
+}
+
+.rating-chart__note{
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
