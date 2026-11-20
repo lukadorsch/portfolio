@@ -1,11 +1,11 @@
 import './Button.css'
 
-function Button({ children, variant = 'primary', href, onClick }) {
+function Button({ children, variant = 'primary', href, download, onClick }) {
     const className = `button button--${variant}`;
 
     if (href) {
         return (
-            <a className={className} href={href}>
+            <a className={className} href={href} download={download}>
                 {children}
             </a>
         );

@@ -5,7 +5,7 @@ function Footer() {
         { label: 'Email', href: 'mailto:luka.dorsch@gmail.com' },
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/luka-dorsch-0913a844a/' },
         { label: 'GitHub', href: 'https://github.com/lukadorsch' },
-        { label: 'CV', href: '/cv.pdf' },
+        { label: 'CV', href: '/cv.pdf', download: 'Luka_Dorsch_CV.pdf' },
     ];
 
     const renderLinks = (items) => (
@@ -14,6 +14,7 @@ function Footer() {
                 <a
                     key={link.label}
                     href={link.href}
+                    download={link.download}
                     {...(link.href.startsWith('http') && { target: '_blank', rel: 'noreferrer' })}
                 >
                     {link.label}

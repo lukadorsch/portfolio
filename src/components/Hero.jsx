@@ -20,7 +20,7 @@ function Hero() {
                 </p>
                 <div className="hero__actions">
                     <Button href="#work">View case studies</Button>
-                    <Button variant="secondary" href="/cv.pdf">Download CV</Button>
+                    <Button variant="secondary" href="/cv.pdf" download="Luka_Dorsch_CV.pdf">Download CV</Button>
                 </div>
             </div>
             <img className="hero__image" src="/portrait.jpg" alt="Portrait of Luka Dorsch" />
