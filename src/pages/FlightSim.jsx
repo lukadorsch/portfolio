@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import CaseStudyHero from '../components/CaseStudyHero';
@@ -14,7 +15,7 @@ import { Gamepad2, List, Navigation, RotateCcw, FileSpreadsheet, Flag, ArrowRigh
 
 function FlightSim() {
     const flightSimMetaItems=[
-        { header: 'Context', body: 'Coburg University · HCI2'},
+        { header: 'Context', body: 'Hochschule Coburg · HCI2'},
         { header: 'Timeline', body: 'Summer semester 2026'},
         { header: 'Role', body: 'Concept, Development, Testing, Analysis'},
         { header: 'Tools', body: 'Unity 6, C#, CSV analysis'},
@@ -27,7 +28,7 @@ function FlightSim() {
             <main>
                 <CaseStudyHero 
                     overline="CASE STUDY · HUMAN-COMPUTER INTERACTION"
-                    title="Gamepad vs. MIDI Mixer: What's the Best Way to Fly a Plane?"
+                    title="Gamepad vs. MIDI Controller: What's the Best Way to Fly a Plane?"
                     subtitle="A user study comparing input methods in a Unity flight simulation"
                     metaItems={flightSimMetaItems}
                     image="/flightsim.png"
@@ -62,7 +63,7 @@ function FlightSim() {
                     title="From a given flight sim to a testable study setup"
                     intro="The course provided a basic Unity flight simulation. My job was
                     to turn it into something I could actually run a study with: two complete
-                    control schemes, a clear trask for participants and automatic data collection,
+                    control schemes, a clear task for participants and automatic data collection,
                     so every run was measured the same way."
                 >
                     <div className="card-grid">
@@ -89,7 +90,7 @@ function FlightSim() {
                     </div>
                     <h3 className="css__subHeader">Control Mapping</h3>
                     <p className="css__intro">Both devices controlled the same four actions: 
-                        pitch, yaw roll and turbo
+                        pitch, yaw, roll and turbo.
                     </p>
                     <div className="css__mappingGrid">
                         <Card title="Nintendo Switch Pro Controller">
@@ -150,10 +151,10 @@ function FlightSim() {
                     <h3 className="css__subHeader">What I measured</h3>
                     <div className="card-grid">
                         <Card title="Objective · logged automatically">
-                            Succesful landing · Rings reached · Flight time (successful runs 
+                            Successful landing · Rings reached · Flight time (successful runs 
                             only) · Number of crashes
                         </Card>
-                        <Card title="Subjective · 7-point Likert Scale">
+                        <Card title="Subjective · 7-point Likert scale">
                             Intuitiveness · Precision · Fun · Required concentration · Overall rating
                         </Card>
                     </div>
@@ -161,7 +162,7 @@ function FlightSim() {
                 <hr />
                 <CaseStudySection
                     overline="04 — Results"
-                    title="The gamepad won on performace — but not on fun"
+                    title="The gamepad won on performance — but not on fun"
                     intro="The difference in performance was bigger than expected: every gamepad run was successful, 
                     while only one MIDI run made it to the landing. Subjectively, the picture was similar, 
                     with one clear exception: fun."
@@ -171,7 +172,7 @@ function FlightSim() {
                     <div className="card-grid">
                         {objectiveResults.map((r) => <ResultCard key={r.label} {...r} />)}
                     </div>
-                    <p className="css__note">Flight time is left out: only one MIDI run was successful (145 s vs. 45 s average with the gamepad)</p>
+                    <p className="css__note">Flight time is left out: only one MIDI run was successful (145 s vs. 45 s average with the gamepad).</p>
                     <h3 className="css__subHeader">Subjective results</h3>
                     <RatingChart data={subjectiveResults} />
                     <div className="card-grid">
@@ -193,8 +194,8 @@ function FlightSim() {
                     overline="05 — Key Insight"
                 >
                     <Card
-                        style={{ border: '1px solid var(--accent)', padding: 48 }}
-                        titleStyle={{ maxWidth: 800, fontSize: '28px' }}
+                        style={{ border: '1px solid var(--accent)', padding: 'clamp(16px, 5vw, 48px)' }}
+                        titleStyle={{ maxWidth: 800, fontSize: 'clamp(20px, 3vw, 28px)' }}
                         title="
                     Performance and enjoyment don’t always go together. An unfamiliar input can 
                     be fun even while people keep failing, but for tasks that need precision, 
@@ -202,13 +203,13 @@ function FlightSim() {
                     />
                     <h3 className="css__subHeader">Two lessons I'm taking into future projects:</h3>
                     <div className="card-grid">
-                        <Card title="Novely creates engagement, not usability.">
+                        <Card title="Novelty creates engagement, not usability.">
                             The MIDI controller was rated just as fun, but needed twice the concentration 
                             and led to five times more crashes. Fun alone doesn't make an interface work.
                         </Card>
                         <Card title="Mapping beats hardware.">
                             The biggest problem wasn't the device itself but one mapping decision: the pitch fader. 
-                            Matching users' mental models matter more than the physical controls.
+                            Matching users' mental models matters more than the physical controls.
                         </Card>
                     </div>
                 </CaseStudySection>
@@ -223,8 +224,8 @@ function FlightSim() {
                         <Card title="Limitations">
                             <ul>
                                 <li><strong>Small sample:</strong> 7 participants show tendencies, not proof.</li>
-                                <li><strong>Descriptive statistics only:</strong> no significant tests.</li>
-                                <li><strong>Order not counterbalanced:</strong> participants chose which device to start with, so learning effects are possible</li>
+                                <li><strong>Descriptive statistics only:</strong> no significance tests.</li>
+                                <li><strong>Order not counterbalanced:</strong> participants chose which device to start with, so learning effects are possible.</li>
                                 <li><strong>Flight time for MIDI is based on a single successful run,</strong> so it isn't meaningful.</li>
                             </ul>
                         </Card>
@@ -238,6 +239,9 @@ function FlightSim() {
                         </Card>
                     </div>
                 </CaseStudySection>
+                <div className="nav__links">
+                    <Link className="legal__link" to="/#work">← Back to home</Link>
+                </div>
             </main>
             <hr />
             <Footer />

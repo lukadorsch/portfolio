@@ -91,3 +91,27 @@
     color: var(--text-secondary);
     margin: 0;
 }
+
+@media (max-width: 800px) {
+    .css__mappingGrid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .css__stepArrow{
+        transform: rotate(90deg);
+    }
+
+    .css__number-card{
+        gap: 8px;
+    }
+
+    .css__number-title{
+        font-size: 26px;
+    }
+
+    .css__steps{
+        display: flex;
+        flex-direction: column;
+    }
+}

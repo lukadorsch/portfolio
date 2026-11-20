@@ -15,7 +15,7 @@ function Work() {
                 />
                 <ProjectCard
                 image="/flightsim.png"
-                title="Joystick vs. Sliders"
+                title="Gamepad vs. MIDI Controller"
                 description="A user study comparing two input devices for controlling a flight simulation."
                 tags={['User Research', 'Unity', 'C#']}
                 href="/flight-sim"

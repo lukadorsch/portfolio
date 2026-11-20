@@ -78,3 +78,36 @@
 .footer__legal a:hover{
     color: var(--text-primary);
 }
+
+@media (max-width: 800px) {
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+
+    .footer__links{
+        gap: 24px;
+    }
+
+    .footer__line:not(.footer__line--meta){
+        display: contents;
+    }
+
+    .footer__title,
+    .footer__text,
+    .footer__line--meta{
+        flex-basis: 100%;
+    }
+
+    .footer__title{ order: 1; }
+    .footer__text{ order: 2; }
+    .footer__links{ order: 3; }
+    .footer__line--meta{ order: 4; }
+}
+
+@media (max-width: 480px) {
+  .footer__text {
+    display: none;
+  }
+}

@@ -43,6 +43,7 @@
 
 .rating-chart__bar{
     width: 20px;
+    height: calc(var(--ratio) * 100%);
     border-radius: 4px 4px 0 0;
 }
 
@@ -60,4 +61,45 @@
     font-size: 13px;
     color: var(--text-secondary);
     margin: 0;
+}
+
+@media (max-width: 800px) {
+    .rating-chart{
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .rating-chart__group{
+        align-items: stretch;
+        padding: 12px;
+    }
+
+    .rating-chart__label{
+        order: -1;
+        text-align: left;
+    }
+
+    .rating-chart__bars{
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        gap: 6px;
+    }
+
+    .rating-chart__bar-wrap{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        height: auto;
+        gap: 8px;
+    }
+
+    .rating-chart__bar{
+        width: calc(var(--ratio) * (100% - 36px));
+        height: 16px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .rating-chart__value{
+        min-width: 28px;
+    }
 }

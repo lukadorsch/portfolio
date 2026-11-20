@@ -12,7 +12,7 @@ function About() {
             <h2 className="about__title">About</h2>
             <div className="about__content">
                 <p className="about__text">Out of everything in my Visual Computing studies, two things stuck with me most: human-computer interaction and web development. I like understanding why people struggle with an interface, and then actually building the better version.
-                    <br></br><br></br>Alongside my studies, I work as a working student in e-commerce, maintaining product data and content for an online shop. That’s also where the idea for my AI product data checker came from.
+                    <br></br><br></br>Alongside my studies, I’m a working student in e-commerce, maintaining product data and content for an online shop. That’s also where the idea for my AI product data checker came from.
                     <br></br><br></br>Outside of work, you’ll find me making music or doing sports.
                 </p>
                 <div className="about__blocks">

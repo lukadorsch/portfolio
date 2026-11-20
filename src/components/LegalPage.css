@@ -99,3 +99,9 @@
 .legal__content .seal a {
   color: var(--text-secondary);
 }
+
+@media (max-width: 800px) {
+    .legal{
+        padding: 24px 24px 0 24px;
+    }
+}

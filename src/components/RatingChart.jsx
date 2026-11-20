@@ -5,7 +5,7 @@ function Bar({ value, color }) {
     return (
         <div className="rating-chart__bar-wrap">
             <span className="rating-chart__value">{value}</span>
-            <div className="rating-chart__bar" style={{ height: `${(value / 7) * 100}%`, background: color }} />
+            <div className="rating-chart__bar" style={{ '--ratio': value / 7, background: color }} />
         </div>
     );
 }
@@ -28,7 +28,7 @@ function RatingChart({ data}) {
                     </div>
                 ))}
             </div>
-            <p className="rating-chart__note">Scale 1-7. For concentration, lower is better.</p>
+            <p className="rating-chart__note">Scale 1–7. For concentration, lower is better.</p>
         </div>
     );
 }
