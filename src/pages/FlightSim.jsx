@@ -24,7 +24,6 @@ function FlightSim() {
     return(
         <div className="flightsim">
             <Nav />
-            <hr />
             <main>
                 <CaseStudyHero 
                     overline="CASE STUDY · HUMAN-COMPUTER INTERACTION"

@@ -7,7 +7,6 @@ function LegalPage({ title, children }) {
     return (
         <div className="legal">
             <Nav />
-            <hr />
             <article lang="de">
                 <h1 className="legal__title">{title}</h1>
                 {children}

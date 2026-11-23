@@ -2,6 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--bg-page);
+    padding: 24px 0;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.nav + * {
+    margin-top: 24px;
 }
 
 .nav__wordmark{

@@ -17,7 +17,6 @@ function Home() {
     return(
         <div className="home">
             <Nav />
-            <hr />
             <main className="home__content">
                 <Hero />
                 <Work />
