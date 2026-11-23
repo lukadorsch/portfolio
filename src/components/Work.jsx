@@ -12,6 +12,7 @@ function Work() {
                 description="An AI-assisted tool that helps shop teams keep product data consistent."
                 tags={['UX for AI', 'React', 'Python', 'User Research']}
                 href="/data-checker"
+                delay={0}
                 />
                 <ProjectCard
                 image="/flightsim.png"
@@ -19,6 +20,7 @@ function Work() {
                 description="A user study comparing two input devices for controlling a flight simulation."
                 tags={['User Research', 'Unity', 'C#']}
                 href="/flight-sim"
+                delay={0.15}
                 />
             </div>
         </section>

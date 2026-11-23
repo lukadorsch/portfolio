@@ -53,6 +53,18 @@ ul{
     padding-left: 16px;
 }
 
+.reveal{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+
+.reveal.is-visible{
+    opacity: 1;
+    transform: none;
+}
+
 @media (max-width: 800px) {
     .home{
         padding: 0 24px;
@@ -61,5 +73,17 @@ ul{
     .home__content{
         gap: 48px;
         padding-bottom: 24px;
+    }
+
+    .reveal{
+        transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal{
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
