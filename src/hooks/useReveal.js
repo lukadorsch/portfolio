@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useReveal(threshold = 0.15) {
+export function useReveal(threshold = 0.15, rootMargin = '0px') {
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -15,12 +15,12 @@ export function useReveal(threshold = 0.15) {
                     observer.unobserve(element);
                 }
             },
-            { threshold }
+            { threshold, rootMargin }
         );
 
         observer.observe(element);
         return () => observer.disconnect();
-    }, [threshold]);
+    }, [threshold, rootMargin]);
 
     return [ref, isVisible];
 }
