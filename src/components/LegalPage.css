@@ -1,8 +1,6 @@
 .legal{
     display: flex;
     flex-direction: column;
-    max-width: 1120px;
-    margin: 0 auto;
 }
 
 .legal h2{

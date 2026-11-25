@@ -15,15 +15,17 @@ function Home() {
     }, [hash, key]);
 
     return(
-        <div className="home">
-            <Nav />
-            <main className="home__content">
-                <Hero />
-                <Work />
-                <About />
-            </main>
-            <hr />
-            <Footer />
+        <div className="page">
+            <div className="home">
+                <Nav />
+                <main className="home__content">
+                    <Hero />
+                    <Work />
+                    <About />
+                </main>
+                <hr />
+                <Footer />
+            </div>
         </div>
     );
 }

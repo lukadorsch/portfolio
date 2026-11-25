@@ -29,11 +29,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.page{
+    max-width: 1120px;
+    margin: auto;
+    padding-inline: clamp(1.5rem, -0.5rem + 9vw, 6rem);
+}
+
 .home{
     display: flex;
     flex-direction: column;
-    max-width: 1120px;
-    margin: 0 auto;
 }
 
 .home__content{
@@ -66,10 +70,6 @@ ul{
 }
 
 @media (max-width: 800px) {
-    .home{
-        padding: 0 24px;
-    }   
-
     .home__content{
         gap: 48px;
         padding-bottom: 24px;
